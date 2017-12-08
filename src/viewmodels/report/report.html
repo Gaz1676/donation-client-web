@@ -1,0 +1,31 @@
+<template>
+
+<div></div>
+
+  <section class="ui inverted grey segment">
+    <h3 class='ui dividing header'> Donations to Date</h3>
+
+    <article class="eight wide column">
+      <table class="ui yellow center aligned celled table segment">
+
+        <thead>
+        <tr>
+          <th>Amount</th>
+          <th>Method donated</th>
+          <th>Candidate</th>
+        </tr>
+        </thead>
+
+        <tbody>
+        <tr repeat.for="donation of donations">
+          <td><i class="euro icon"></i> ${donation.amount}</td>
+          <td> ${donation.method}</td>
+          <td> ${donation.candidate.lastName}, ${donation.candidate.firstName}</td>
+        </tr>
+        </tbody>
+
+      </table>
+    </article>
+  </section>
+
+</template>

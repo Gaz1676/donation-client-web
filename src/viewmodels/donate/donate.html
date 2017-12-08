@@ -1,0 +1,45 @@
+<template>
+
+  <section class="ui two column raised grid basic segment">
+    <section class="ui inverted grey segment">
+      <h3 class='ui center aligned dividing header'> Make a Donation </h3>
+
+      <form submit.trigger="makeDonation()" class="ui yellow form column raised segment">
+
+        <div class="grouped inline fields">
+          <div class="field">
+            <label>Amount</label> <input type="number" value.bind="amount">
+          </div>
+        </div>
+
+        <h4 class="ui center aligned dividing header"> Select Method </h4>
+        <div class="grouped inline fields">
+
+          <div class="field" repeat.for="method of methods">
+            <div class="ui radio checkbox">
+              <input type="radio" model.bind="method" checked.bind="selectedMethod">
+              <label>${method}</label>
+            </div>
+          </div>
+          <label class="ui circular label"> ${selectedMethod} </label>
+        </div>
+
+        <h4 class="ui center aligned dividing header"> Select Candidate </h4>
+        <div class="grouped inline fields">
+          <div class="field" repeat.for="candidate of candidates">
+            <div class="ui radio checkbox">
+              <input type="radio" model.bind="candidate" checked.bind="selectedCandidate">
+              <label>${candidate.lastName}, ${candidate.firstName}</label>
+            </div>
+          </div>
+          <label class="ui circular label"> ${selectedCandidate.firstName} ${selectedCandidate.lastName}</label>
+        </div>
+
+        <button class="ui blue submit button"><i class="euro icon"></i>Donate</button>
+
+      </form>
+
+    </section>
+  </section>
+
+</template>

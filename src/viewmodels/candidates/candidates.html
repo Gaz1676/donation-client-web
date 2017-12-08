@@ -1,0 +1,28 @@
+<template>
+
+  <section class="ui center aligned two column raised grid basic segment">
+    <section class="ui inverted grey segment">
+      <h3 class="ui dividing header"> Add a Candidate </h3>
+
+      <form submit.trigger="addCandidate()" class="ui yellow center aligned form column raised segment">
+
+        <div class="field">
+          <label>First Name </label> <input value.bind="firstName">
+        </div>
+
+        <div class="field">
+          <label>Last Name </label> <input value.bind="lastName">
+        </div>
+
+        <div class="field">
+          <label>Office </label> <input value.bind="office">
+        </div>
+
+        <button class="ui blue submit button">Add&emsp;<i class="add user icon"></i></button>
+
+      </form>
+
+    </section>
+  </section>
+
+</template>

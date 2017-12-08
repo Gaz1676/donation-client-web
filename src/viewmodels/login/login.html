@@ -1,0 +1,24 @@
+<template>
+
+  <section class="ui two column raised grid basic segment">
+    <section class="ui inverted grey segment">
+      <h2 class="ui center aligned header">Log-in</h2>
+
+      <form submit.delegate="login($event)" class="ui yellow form column raised segment">
+
+        <div class="field">
+          <label>Email</label> <input placeholder="Email" value.bind="email"/>
+        </div>
+
+        <div class="field">
+          <label>Password</label> <input type="password" value.bind="password"/>
+        </div>
+
+        <button class="ui blue submit button"><i class="sign in icon"></i>Login</button>
+
+      </form>
+
+    </section>
+  </section>
+
+</template>

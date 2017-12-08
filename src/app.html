@@ -1,0 +1,61 @@
+<!--
+<template>
+
+  <div class="ui container">
+
+    <nav class="ui inverted grey menu">
+      <header class="header item"> Donation</header>
+      <div class="right menu">
+        <div show.bind="!loggedIn">
+          <a class="item" click.trigger="signup()"> Signup&emsp;<i class="write icon"></i></a>
+        </div>
+        <div show.bind="loggedIn">
+          <a id="logout" class="item" click.trigger="logout()"> Logout&emsp;<i class="sign out icon"></i></a>
+        </div>
+      </div>
+    </nav>
+
+      <div show.bind="!loggedIn" class="ui row">
+        <div show.bind="!showSignup" class="ui row">
+          <section class="ui five wide column">
+            <compose view-model="./viewmodels/login/login"></compose>
+          </section>
+        </div>
+        <div show.bind="showSignup" class="ui row">
+          <section class="ui five wide column">
+            <compose view-model="./viewmodels/signup/signup"></compose>
+          </section>
+        </div>
+      </div>
+    <div show.bind="loggedIn" class="ui row">
+      <section class="ui inverted grey center aligned segment">
+        <h3 class="ui center aligned header">Hey There ${firstName} - Let's Donate!!</h3>
+        <compose view-model="./viewmodels/stats/stats"></compose>
+      </section>
+
+      <section class="ui three column raised grid basic center aligned segment">
+        <aside class="column">
+          <compose view-model="./viewmodels/donate/donate"></compose>
+        </aside>
+        <article class="column">
+          <compose view-model="./viewmodels/candidates/candidates"></compose>
+        </article>
+        <article class="column">
+          <compose view-model="./viewmodels/report/report"></compose>
+        </article>
+      </section>
+
+    </div>
+    </section>
+  </div>
+
+</template>
+-->
+
+<template>
+  <require from="nav-bar.html"></require>
+  <div class="ui container page-host">
+    <nav-bar router.bind="router"></nav-bar>
+    <router-view></router-view>
+  </div>
+</template>
